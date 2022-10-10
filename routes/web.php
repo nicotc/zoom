@@ -19,9 +19,11 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 
 
 
+Route::get('/', function () {
+    return redirect('/login');
+});
 
-
-Auth::routes();
+Auth::routes( );
 
 
 Route::middleware(['auth'])->group(function () {

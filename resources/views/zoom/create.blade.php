@@ -42,7 +42,11 @@
 
 
                 </div>
+
+                  <a href="{{ route('zoom.index') }}" class="btn btn-outline-primary btn-lg">Listado Zoom</a>
+
             </div>
+
         </div>
     </div>
 </div>

@@ -10,12 +10,15 @@
                 <div class="card-body">
                     @if (session('zoom_meet'))
                         <div class="alert alert-success" role="alert">
-                             @php
-                                $zoom_meet = json_decode(session('zoom_meet'));
-                                echo "<pre>";
-                                    echo  json_encode($zoom_meet, JSON_PRETTY_PRINT);
-                                echo "</pre>";
+                            @php
+                                $zoom_meet = (array)  json_decode(session('zoom_meet') );
+
                             @endphp
+                                <label>url: </label> {{ $zoom_meet['url'] }} <br>
+                                <label>id: </label> {{ $zoom_meet['id'] }}<br>
+                                <label>Topic: </label>{{ $zoom_meet['nivel'] }}<br>
+                                <label>Start Time: </label> {{ $zoom_meet['hora de inicio'] }}<br>
+                                <label>timezone: </label> {{ $zoom_meet['timezone'] }}<br>
                         </div>
                     @endif
 
